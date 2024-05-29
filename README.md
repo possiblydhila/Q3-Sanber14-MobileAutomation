@@ -3,5 +3,5 @@
 | Nama Anggota              | Pembagian Tugas                                      |
 | --------------------------| -----------------------------------------------------|
 | Fadhila Purboningrum    | Sign in & Sign Out                                   |
-| Aloka Aryayudha Pratama     |                                                 |
+| Aloka Aryayudha Pratama     |   Book                                             |
 | Alvio Yunita Putri        |  |
