@@ -9,11 +9,12 @@ Verify Home Page Loaded
 Click Sign In Button On Home
     Click Element                        ${login-button}
 
+
 Click Book Button on Home
     Click Element                         ${book-button}
 
 Click Search Button on Home
     Click Element                         ${search-button}
-    
+
 Click Check In Button on Home
     Click Element                         ${chekin-button}
