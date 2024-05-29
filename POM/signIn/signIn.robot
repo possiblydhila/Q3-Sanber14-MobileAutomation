@@ -5,9 +5,8 @@ Variables       signIn-locators.yaml
 
 *** Keywords ***
 Verify Sign In Page
-    Element Should Be Visible         ${verify-homepage}
+    Wait Until Element Is Visible     ${verify-sign-in-page}    timeout=5s
 Input Username
-    Verify Sign In Page 
     [Arguments]                       ${username}   
     Input Text                        ${username-input}   ${username}
 
@@ -19,4 +18,4 @@ Click Sign In Button
     Click Element                     ${sign-in-button}
 
 Verify Login Success
-    Element Should Be Visible         ${verify-sign-in}
+    Wait Until Element Is Visible     ${verify-sign-in}    timeout=5s

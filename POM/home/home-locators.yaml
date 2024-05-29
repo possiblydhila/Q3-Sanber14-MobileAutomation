@@ -1,2 +1,2 @@
 login-button: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]
-verify-homepage: //android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]
+# verify-homepage: //android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]

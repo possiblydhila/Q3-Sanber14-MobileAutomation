@@ -18,6 +18,7 @@ ${TEXT_ALERT}           Invalid username/password
 Successfuly Signing In With Valid Credential
     Verify Home Page Loaded
     Click Sign In Button On Home
+    Verify Sign In Page
     Input Username                    ${VALID_USERNAME}
     Input User Password               ${VALID_PASSWORD}
     Click Sign In Button
@@ -26,47 +27,53 @@ Successfuly Signing In With Valid Credential
 Failed Sign In With Blank Username And Valid Password
     Verify Home Page Loaded
     Click Sign In Button On Home
+    Verify Sign In Page
     Input Username                    ${BLANK_USERNAME}
     Input User Password               ${VALID_PASSWORD}
     Click Sign In Button
-    Wait Until Page Contains          ${ALERT_TEXT}
+    Wait Until Page Contains          ${TEXT_ALERT}
 
 Failed Login With Valid Username And Blank Password
     Verify Home Page Loaded
     Click Sign In Button On Home
+    Verify Sign In Page
     Input Username                    ${VALID_USERNAME}
     Input User Password               ${BLANK_PASSWORD}
     Click Sign In Button
-    Wait Until Page Contains          ${ALERT_TEXT}
+    Wait Until Page Contains          ${TEXT_ALERT}
 
 Failed Login With an Invalid Username And Password
     Verify Home Page Loaded
     Click Sign In Button On Home
+    Verify Sign In Page
     Input Username                    ${INVALID_USERNAME}
     Input User Password               ${INVALID_PASSWORD}
     Click Sign In Button
-    Wait Until Page Contains          ${ALERT_TEXT}
+    Wait Until Page Contains          ${TEXT_ALERT}
 
 Failed Login With a Valid Username And Invalid Password
     Verify Home Page Loaded
     Click Sign In Button On Home
+    Verify Sign In Page
     Input Username                    ${VALID_USERNAME}
     Input User Password               ${INVALID_PASSWORD}
     Click Sign In Button
-    Wait Until Page Contains          ${ALERT_TEXT}
+    Wait Until Page Contains          ${TEXT_ALERT}
 
 Failed Login With an Invalid Username And Valid Password
     Verify Home Page Loaded
     Click Sign In Button On Home
+    Verify Sign In Page
     Input Username                    ${INVALID_USERNAME}
     Input User Password               ${VALID_PASSWORD}
     Click Sign In Button
-    Wait Until Page Contains          ${ALERT_TEXT}
+    Wait Until Page Contains          ${TEXT_ALERT}
 
 Failed Login With Both Empty Username And Password
     Verify Home Page Loaded
     Click Sign In Button On Home
+    Verify Sign In Page
     Input Username                    ${BLANK_USERNAME}
     Input User Password               ${BLANK_PASSWORD}
     Click Sign In Button
-    Wait Until Page Contains          ${ALERT_TEXT}
+    Wait Until Page Contains          ${TEXT_ALERT}
