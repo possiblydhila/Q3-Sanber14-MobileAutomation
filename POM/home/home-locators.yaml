@@ -1,0 +1,5 @@
+login-button: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]
+# verify-homepage: //android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]
+search-button: //android.widget.Button[@resource-id="com.example.myapplication:id/search_flight"]
+chekin-button: //android.widget.Button[@resource-id="com.example.myapplication:id/button6"]
+book-button: //android.widget.Button[@resource-id="com.example.myapplication:id/book"]

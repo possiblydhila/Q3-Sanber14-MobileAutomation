@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-29T15:07:01.133009" rpa="false" schemaversion="5">
+<suite id="s1" name="test-SignIn" source="C:\Users\Aloka\Desktop\Automation\AutomationTest\Belajar Automation\Q3-Sanber14-MobileAutomation\Suites\test-SignIn.robot">
+<test id="s1-t1" name="Successfuly Signing In With Valid Credential" line="18">
+<kw name="Open Flight Application" owner="base" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T15:07:01.388835" elapsed="12.614220"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:01.387795" elapsed="12.615260"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:14.742922" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:07:14.004564" elapsed="0.739906"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:14.004564" elapsed="0.740012"/>
+</kw>
+<kw name="Click Sign In Button On Home" owner="home">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:14.747874" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2024-05-29T15:07:14.860455" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:14.745885" elapsed="0.114570"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:14.744840" elapsed="0.116612"/>
+</kw>
+<kw name="Verify Sign In Page" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:15.976065" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]
+xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]</msg>
+<arg>${verify-sign-in-page}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:07:14.861452" elapsed="1.114613"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:14.861452" elapsed="1.114613"/>
+</kw>
+<kw name="Input Username" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:15.977553" level="INFO">Typing text 'support@ngendigital.com' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2024-05-29T15:07:16.098785" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>${username-input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:15.976553" elapsed="0.122232"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<status status="PASS" start="2024-05-29T15:07:15.976553" elapsed="0.122232"/>
+</kw>
+<kw name="Input User Password" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:16.102642" level="INFO">Typing text 'abc123' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg time="2024-05-29T15:07:16.946053" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]</msg>
+<arg>${password-input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:16.100649" elapsed="0.845404"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-05-29T15:07:16.099645" elapsed="0.846408"/>
+</kw>
+<kw name="Click Sign In Button" owner="signIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:16.950235" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]'.</msg>
+<msg time="2024-05-29T15:07:18.012213" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]</msg>
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:16.947240" elapsed="1.064973"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:16.947240" elapsed="1.064973"/>
+</kw>
+<kw name="Verify Login Success" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:19.180184" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView"]
+xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView"]</msg>
+<arg>${verify-sign-in}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:07:18.015525" elapsed="1.164659"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:18.014208" elapsed="1.165976"/>
+</kw>
+<kw name="Close Flight Application" owner="base" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-29T15:07:19.181221" elapsed="1.045504"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:19.181221" elapsed="1.045504"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:01.387795" elapsed="18.839926"/>
+</test>
+<test id="s1-t2" name="Failed Sign In With Blank Username And Valid Password" line="27">
+<kw name="Open Flight Application" owner="base" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T15:07:20.229716" elapsed="12.847117"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:20.229716" elapsed="12.847117"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:33.784264" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:07:33.077877" elapsed="0.706387"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:33.076833" elapsed="0.707431"/>
+</kw>
+<kw name="Click Sign In Button On Home" owner="home">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:33.786861" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2024-05-29T15:07:33.902412" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:33.784860" elapsed="0.117552"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:33.784860" elapsed="0.118516"/>
+</kw>
+<kw name="Verify Sign In Page" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:35.038512" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]
+xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]</msg>
+<arg>${verify-sign-in-page}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:07:33.903376" elapsed="1.136144"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:33.903376" elapsed="1.136144"/>
+</kw>
+<kw name="Input Username" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:35.043192" level="INFO">Typing text '' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2024-05-29T15:07:35.154693" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>${username-input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:35.040516" elapsed="0.114177"/>
+</kw>
+<arg>${BLANK_USERNAME}</arg>
+<status status="PASS" start="2024-05-29T15:07:35.040516" elapsed="0.114177"/>
+</kw>
+<kw name="Input User Password" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:35.158143" level="INFO">Typing text 'abc123' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg time="2024-05-29T15:07:35.788445" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]</msg>
+<arg>${password-input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:35.156142" elapsed="0.632303"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-05-29T15:07:35.154693" elapsed="0.633752"/>
+</kw>
+<kw name="Click Sign In Button" owner="signIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:35.792488" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]'.</msg>
+<msg time="2024-05-29T15:07:36.869292" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]</msg>
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:35.789440" elapsed="1.079852"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:35.788445" elapsed="1.080847"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${TEXT_ALERT}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T15:07:36.869292" elapsed="0.087344"/>
+</kw>
+<kw name="Close Flight Application" owner="base" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-29T15:07:36.958629" elapsed="1.126065"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:36.957632" elapsed="1.127062"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:20.228719" elapsed="17.856977"/>
+</test>
+<test id="s1-t3" name="Failed Login With Valid Username And Blank Password" line="36">
+<kw name="Open Flight Application" owner="base" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T15:07:38.088696" elapsed="13.320538"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:38.088696" elapsed="13.320538"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:52.150251" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:07:51.410230" elapsed="0.740021"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:51.410230" elapsed="0.740021"/>
+</kw>
+<kw name="Click Sign In Button On Home" owner="home">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:52.153210" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2024-05-29T15:07:52.275324" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:52.151214" elapsed="0.124110"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:52.151214" elapsed="0.125110"/>
+</kw>
+<kw name="Verify Sign In Page" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:53.390737" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]
+xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]</msg>
+<arg>${verify-sign-in-page}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:07:52.278570" elapsed="1.112167"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:52.277572" elapsed="1.113165"/>
+</kw>
+<kw name="Input Username" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:53.394290" level="INFO">Typing text 'support@ngendigital.com' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2024-05-29T15:07:53.509769" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>${username-input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:53.391734" elapsed="0.118035"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<status status="PASS" start="2024-05-29T15:07:53.391734" elapsed="0.118035"/>
+</kw>
+<kw name="Input User Password" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:53.512760" level="INFO">Typing text '' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg time="2024-05-29T15:07:54.134174" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]</msg>
+<arg>${password-input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:53.510762" elapsed="0.623412"/>
+</kw>
+<arg>${BLANK_PASSWORD}</arg>
+<status status="PASS" start="2024-05-29T15:07:53.510762" elapsed="0.623412"/>
+</kw>
+<kw name="Click Sign In Button" owner="signIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:07:54.137987" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]'.</msg>
+<msg time="2024-05-29T15:07:54.762422" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]</msg>
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:07:54.134986" elapsed="0.627436"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:54.134986" elapsed="0.627436"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${TEXT_ALERT}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T15:07:54.763451" elapsed="0.111258"/>
+</kw>
+<kw name="Close Flight Application" owner="base" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-29T15:07:54.876725" elapsed="1.104530"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:54.875722" elapsed="1.105533"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:38.087697" elapsed="17.893558"/>
+</test>
+<test id="s1-t4" name="Failed Login With an Invalid Username And Password" line="45">
+<kw name="Open Flight Application" owner="base" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T15:07:55.984246" elapsed="13.098124"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:55.983247" elapsed="13.099123"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:09.814012" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:08:09.083365" elapsed="0.731667"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:09.083365" elapsed="0.731667"/>
+</kw>
+<kw name="Click Sign In Button On Home" owner="home">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:09.818027" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2024-05-29T15:08:09.930663" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:09.816029" elapsed="0.114634"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:09.815032" elapsed="0.116630"/>
+</kw>
+<kw name="Verify Sign In Page" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:11.290817" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]
+xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]</msg>
+<arg>${verify-sign-in-page}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:08:09.932658" elapsed="1.359158"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:09.932658" elapsed="1.359158"/>
+</kw>
+<kw name="Input Username" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:11.297352" level="INFO">Typing text 'support@ngendigital.con' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2024-05-29T15:08:11.470097" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>${username-input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:11.294323" elapsed="0.175774"/>
+</kw>
+<arg>${INVALID_USERNAME}</arg>
+<status status="PASS" start="2024-05-29T15:08:11.292811" elapsed="0.177286"/>
+</kw>
+<kw name="Input User Password" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:11.481711" level="INFO">Typing text 'invalidd' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg time="2024-05-29T15:08:12.213191" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]</msg>
+<arg>${password-input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:11.474376" elapsed="0.738815"/>
+</kw>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="PASS" start="2024-05-29T15:08:11.473088" elapsed="0.740103"/>
+</kw>
+<kw name="Click Sign In Button" owner="signIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:12.220212" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]'.</msg>
+<msg time="2024-05-29T15:08:13.154196" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]</msg>
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:12.214194" elapsed="0.940511"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:12.214194" elapsed="0.940511"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${TEXT_ALERT}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T15:08:13.156707" elapsed="0.212822"/>
+</kw>
+<kw name="Close Flight Application" owner="base" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-29T15:08:13.371525" elapsed="1.168697"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:13.370526" elapsed="1.169696"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:07:55.983247" elapsed="18.557974"/>
+</test>
+<test id="s1-t5" name="Failed Login With a Valid Username And Invalid Password" line="54">
+<kw name="Open Flight Application" owner="base" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T15:08:14.545726" elapsed="15.298242"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:14.544724" elapsed="15.300285"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:30.584035" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:08:29.847010" elapsed="0.737025"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:29.846006" elapsed="0.738029"/>
+</kw>
+<kw name="Click Sign In Button On Home" owner="home">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:30.591364" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2024-05-29T15:08:30.709704" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:30.586036" elapsed="0.123668"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:30.585041" elapsed="0.124663"/>
+</kw>
+<kw name="Verify Sign In Page" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:31.861330" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]
+xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]</msg>
+<arg>${verify-sign-in-page}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:08:30.710700" elapsed="1.150630"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:30.710700" elapsed="1.151627"/>
+</kw>
+<kw name="Input Username" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:31.868866" level="INFO">Typing text 'support@ngendigital.com' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2024-05-29T15:08:31.999166" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>${username-input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:31.863838" elapsed="0.135328"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<status status="PASS" start="2024-05-29T15:08:31.862327" elapsed="0.136839"/>
+</kw>
+<kw name="Input User Password" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:32.006699" level="INFO">Typing text 'invalidd' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg time="2024-05-29T15:08:33.115875" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]</msg>
+<arg>${password-input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:32.001160" elapsed="1.114715"/>
+</kw>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="PASS" start="2024-05-29T15:08:32.000163" elapsed="1.115712"/>
+</kw>
+<kw name="Click Sign In Button" owner="signIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:33.124394" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]'.</msg>
+<msg time="2024-05-29T15:08:33.744034" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]</msg>
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:33.117877" elapsed="0.626157"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:33.116880" elapsed="0.627154"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${TEXT_ALERT}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T15:08:33.745421" elapsed="0.158240"/>
+</kw>
+<kw name="Close Flight Application" owner="base" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-29T15:08:33.905692" elapsed="1.162813"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:33.904699" elapsed="1.163806"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:14.543214" elapsed="20.527291"/>
+</test>
+<test id="s1-t6" name="Failed Login With an Invalid Username And Valid Password" line="63">
+<kw name="Open Flight Application" owner="base" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T15:08:35.075088" elapsed="14.144492"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:35.074084" elapsed="14.145496"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:50.309384" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:08:49.222576" elapsed="1.086808"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:49.221575" elapsed="1.087809"/>
+</kw>
+<kw name="Click Sign In Button On Home" owner="home">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:50.325498" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2024-05-29T15:08:50.591388" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:50.314936" elapsed="0.277445"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:50.312371" elapsed="0.280010"/>
+</kw>
+<kw name="Verify Sign In Page" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:52.171861" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]</msg>
+<arg>${verify-sign-in-page}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:08:50.594947" elapsed="1.576914"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:50.593896" elapsed="1.578969"/>
+</kw>
+<kw name="Input Username" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:52.179362" level="INFO">Typing text 'support@ngendigital.con' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2024-05-29T15:08:52.333850" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>${username-input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:52.174363" elapsed="0.159487"/>
+</kw>
+<arg>${INVALID_USERNAME}</arg>
+<status status="PASS" start="2024-05-29T15:08:52.173855" elapsed="0.159995"/>
+</kw>
+<kw name="Input User Password" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:52.343859" level="INFO">Typing text 'abc123' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg time="2024-05-29T15:08:53.140107" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]</msg>
+<arg>${password-input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:52.336363" elapsed="0.803744"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-05-29T15:08:52.334359" elapsed="0.806745"/>
+</kw>
+<kw name="Click Sign In Button" owner="signIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:08:53.145600" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]'.</msg>
+<msg time="2024-05-29T15:08:53.805882" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]</msg>
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:08:53.142098" elapsed="0.663784"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:53.142098" elapsed="0.663784"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${TEXT_ALERT}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T15:08:53.819012" elapsed="0.191843"/>
+</kw>
+<kw name="Close Flight Application" owner="base" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-29T15:08:54.028917" elapsed="1.351841"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:54.027919" elapsed="1.352839"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:35.072498" elapsed="20.309258"/>
+</test>
+<test id="s1-t7" name="Failed Login With Both Empty Username And Password" line="72">
+<kw name="Open Flight Application" owner="base" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T15:08:55.385267" elapsed="14.948571"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:55.384265" elapsed="14.949573"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="home">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:09:11.579524" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:09:10.335871" elapsed="1.243653"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:09:10.334873" elapsed="1.245613"/>
+</kw>
+<kw name="Click Sign In Button On Home" owner="home">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:09:11.582515" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2024-05-29T15:09:11.696467" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>${login-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:09:11.581525" elapsed="0.114942"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:09:11.580486" elapsed="0.115981"/>
+</kw>
+<kw name="Verify Sign In Page" owner="signIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-29T15:09:13.174140" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]
+xpath criteria: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView2"]</msg>
+<arg>${verify-sign-in-page}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-29T15:09:11.697469" elapsed="1.476671"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:09:11.697469" elapsed="1.476671"/>
+</kw>
+<kw name="Input Username" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:09:13.179167" level="INFO">Typing text '' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2024-05-29T15:09:13.331125" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>${username-input}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:09:13.176176" elapsed="0.154949"/>
+</kw>
+<arg>${BLANK_USERNAME}</arg>
+<status status="PASS" start="2024-05-29T15:09:13.175172" elapsed="0.155953"/>
+</kw>
+<kw name="Input User Password" owner="signIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T15:09:13.338852" level="INFO">Typing text '' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/password"]'</msg>
+<msg time="2024-05-29T15:09:13.951212" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/password"]</msg>
+<arg>${password-input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:09:13.333158" elapsed="0.618054"/>
+</kw>
+<arg>${BLANK_PASSWORD}</arg>
+<status status="PASS" start="2024-05-29T15:09:13.332120" elapsed="0.619092"/>
+</kw>
+<kw name="Click Sign In Button" owner="signIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T15:09:13.959754" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]'.</msg>
+<msg time="2024-05-29T15:09:14.579099" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/signIn"]</msg>
+<arg>${sign-in-button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T15:09:13.953719" elapsed="0.625380"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:09:13.952210" elapsed="0.626889"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${TEXT_ALERT}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T15:09:14.580136" elapsed="0.150686"/>
+</kw>
+<kw name="Close Flight Application" owner="base" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-05-29T15:09:14.732853" elapsed="1.205965"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:09:14.731819" elapsed="1.206999"/>
+</kw>
+<status status="PASS" start="2024-05-29T15:08:55.383751" elapsed="20.556070"/>
+</test>
+<status status="PASS" start="2024-05-29T15:07:01.133009" elapsed="134.808802"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="test-SignIn">test-SignIn</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

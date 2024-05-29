@@ -1,0 +1,10 @@
+conty-button : //android.widget.Button[@resource-id="com.example.myapplication:id/book"]
+city-button : //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerTo"]
+class-button : //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerClass"]
+start-button : //android.widget.TextView[@resource-id="com.example.myapplication:id/textStartDate"]
+end-button: //android.widget.TextView[@resource-id="com.example.myapplication:id/textEndDate"]
+flight-button: //android.widget.TextView[@resource-id="com.example.myapplication:id/textEndDate"]
+hotel-button : //android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlightHotel"]
+day-button : //android.widget.CheckBox[@resource-id="com.example.myapplication:id/checkBoxDay"]
+book-button: //android.widget.Button[@resource-id="com.example.myapplication:id/book_flight"]
+verify-book: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView"
