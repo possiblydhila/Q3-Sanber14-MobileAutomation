@@ -5,6 +5,7 @@ Resource        ../signIn/signIn.robot
 Variables       book-locators.yaml
 
 
+
 *** Variables ***
 ${VALID_USERNAME}       support@ngendigital.com
 ${VALID_PASSWORD}       abc123
@@ -62,16 +63,28 @@ Choose End Date
 
 Flight
     Wait Until Element Is Visible    ${flight-button}    5s
-    Click Element    xpath=${flight-button}
+    Click Element                    xpath=${flight-button}
 
 Hotel
     Wait Until Element Is Visible    ${hotel-button}    5s
-    Click Element    xpath=${hotel-button}
+    Click Element                    xpath=${hotel-button}
 
 Moredate
     Wait Until Element Is Visible    ${day-button}    5s
-    Click Element    xpath=${day-button}
+    Click Element                    xpath=${day-button}
 
 Book
-    Click Element    ${booking-button}
+    Click Element                    ${booking-button}
+
+# Halaman Bayar
+
+
+Harga Bayar
+
+    Wait Until Element Is Visible    ${verify-harga}  10s
+    Click Element                    xpath=${harga-button}
+    
+Bayar 
+    Click Element                    xpath=${bayar-button}
+
 
